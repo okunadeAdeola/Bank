@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    #body{
+        background-image: url(./image/boliviainteligente-GtkpMJUftUk-unsplash.jpg);
+        background-size: cover;
+    }
+</style>
+<body id="body">
+    <section class="container rounded-1">
+        <div class="row mx-auto p-5 ml-3">
+            
+            <div class="col-lg-3 col-md-6 col-sm-11">
+            </div>
+           <div class="col-lg-6 col-md-6 col-sm-11 shadow">
+                <div>
+                    <h3 id="up" class="fs-1 lh-lg text-light">SIGN UP</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg">
+                        <label class="text-light" for=""><b>First Name*</b></label>
+                        <input type="text" placeholder="Type Name" class="form-control" id="fname">
+                    </div>
+                    <div class="col-lg-6">
+                        <label class="text-light" for=""><b>Other Names*</b></label>
+                        <input type="text" placeholder="Type Other Names" class="form-control" id="oname">
+                    </div>
+                    <div class="col-lg-6">
+                        <label class="text-light" for=""><b>Surname*</b></label>
+                        <input type="text" placeholder="Type Surname" class="form-control" id="sname">
+                    </div>
+                    <div class="col-lg-6">
+                        <label class="text-light" for=""><b>Email Address*</b></label>
+                        <input type="text" placeholder="Type Email" class="form-control" id="mail">
+                    </div>
+                    <div class="col-lg-6">
+                        <label class="text-light" for=""><b>Mobile Number*</b></label>
+                        <input type="number" placeholder="+234" class="form-control" id="mname">
+                    </div>
+                    <!-- <div class="col-lg-6">
+                        <label class="text-light" for=""><b>Gender*</b></label>
+                        <select class="form-control" id="gen1">
+                            <option value="" selected disabled>Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value=" Custom">Custom</option>
+                            <option value=" Others">Others</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6">
+                        <label class="text-light" for=""><b>Date of Birth*</b></label>
+                        <input type="date" placeholder="Enter Date of Birth" class="form-control" id="dob">
+                    </div>
+                    <div class="col-lg-6">
+                        <label class="text-light" for=""><b>Marital Status*</b></label>
+                        <select class="form-control" id="mstatus">
+                            <option value="" selected disabled>Select status</option>
+                            <option value="Savings">Married</option>
+                            <option value="Current">Single</option>
+                            <option value="Cooperate">Divorced</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6">
+                        <label class="text-light" for=""><b>Account type*</b></label>
+                        <select class="form-control" id="atype">
+                            <option value="" selected disabled>Account type</option>
+                            <option value="Savings">Savings</option>
+                            <option value="Current">Current</option>
+                            <option value="Cooperate">Cooperate</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6">
+                        <label class="text-light" for=""><b>Country*</b></label>
+                        <input type="text" placeholder="Enter Your Country" class="form-control" id="country">
+                        </div>
+                        <div class="col-lg-6">
+                            <label class="text-light" for=""><b>State*</b></label>
+                            <input type="text" placeholder="Enter Your State" class="form-control" id="state">
+                            </div> -->
+                    <div class="col-lg-6">
+                        <label class="text-light" for=""><b>Transaction pin*</b></label>
+                        <input type="text" maxlength="4" placeholder="4-Digit pin" class="form-control" id="pin">
+                    </div>
+                    <div class="col-lg-6">
+                        <label class="text-light" for=""><b> Password*</b></label>
+                        <input type="number" placeholder="Type Password" class="form-control" id="pass">
+                    </div>
+                    <div class="col-lg-6">
+                        <label class="text-light" for=""><b>Retype Password*</b></label>
+                        <input type="number" placeholder="Retype Password" class="form-control" id="rpass">
+                    </div>
+                    <!-- <div class="col-lg-6">
+                        <label class="text-light" for=""><b> Account Number*</b></label>
+                        <input type="type" maxlength="10" placeholder="Enter Account Number" class="form-control" id="anumber">
+                    </div> -->
+                    <div class="col-lg-6">
+                        <button onclick="allCustomers()" class="btn border col-lg-11 m-3 bg-success text-light fw-bold">SIGN UP</button>
+                    </div>
+                    <div class="col-lg-6">
+                        <a href="signIn.html"><button class="btn border col-lg-10 m-3 bg-warning text-light fw-bold">SIGN IN</button></a> 
+                    </div>
+        </div> 
+    </section>
+    <div id="disp"></div>
+</body>
+
+<script>
+    var max =(Math.round(Math.random()*10000000000));
+    var mix =(Math.round(Math.random()*1000000000000));
+    let allUsers = []
+    if(localStorage.score){
+        allUsers = JSON.parse(localStorage.getItem("score"))
+    }
+    let balance = 1000
+    let timey = "10:00"
+    let datey = new Date ()
+    let transact = "e21356765687676778987"
+    const allCustomers =()=>{
+        let customers = {
+            firstName: fname.value,
+            otherNames: oname.value,
+            surname: sname.value,
+            email: mail.value,
+            mobileNumber: mname.value,
+            TransactionPin: pin.value,
+            accountNumber:max,
+            amount:1000,
+            bvn: mix,
+            Password: pass.value,
+            retypePassword: rpass.value, 
+            balance:balance,
+            transactionHistory:[
+                {
+                    balance:balance,
+                    time:timey,
+                    transact:transact
+                    
+                }       
+            ]
+        } 
+        if(fname.value == "" ||  sname.value == "" ||  mail.value  == "" ||  mname.value == "" ||  pin.value === "" || pass.value == "" || rpass.value == ""){
+            alert("Please kindly fill all your details")}
+            
+            else if (customers.Password.length < 8) { alert('Password must not less than eight characters') }
+            else if (pass.value != rpass.value) { alert('Your password do not match') }
+             else{   
+        
+        allUsers.push(customers)
+        fname.value = ""
+        oname.value = ""
+        sname.value = ""
+        mail.value  = ""
+        mname.value = ""
+        pass.value = ""
+        rpass.value = ""
+        pin.value = ""
+        localStorage.setItem("score", JSON.stringify(allUsers))
+        window.location.href = "signIn.html"
+        console.log(allUsers);
+    }
+    
+}
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</html>

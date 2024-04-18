@@ -1,0 +1,100 @@
+#two{
+    border: 2px solid blue;
+    height: 90vh;
+    width: 100vw;
+    background-color: blue;
+    z-index: -1;
+}
+#userAmount{
+  border: 0px;
+  font-weight: bold;
+  color: blue;
+  margin-left: 20px;
+}
+#menu{
+  z-index: 1;
+  background-color: blue;
+  width: 100vw;
+  height: 150px;
+}
+#card{
+    position: absolute;
+    width: 90%;
+    top: 10%;
+    left: 5%;
+    height: 30%;
+}
+#three{
+    border: 0px solid red;
+    width: 200px;
+    height: 50px;
+    background-color: red;
+    margin-left: 180px;
+    color: white;
+    cursor: pointer;
+}
+#four{
+    border: 0px solid red;
+    width: 200px;
+    height: 50px;
+    background-color: blue;
+    margin-left: 20px;
+    color: white;
+    cursor: pointer;
+}
+#five{
+    border: 0px solid red;
+    width: 200px;
+    height: 50px;
+    background-color: green;
+    margin-left: 20px;
+    color: white;
+}
+
+#six{
+    border: 0px solid red;
+    width: 200px;
+    height: 50px;
+    background-color: purple;
+    margin-left: 20px;
+    color: white;
+}
+#well{
+  margin-top: -120px;
+  margin-left: -600px;
+  color: white;
+}
+#log{
+  border: 5px solid red;
+  text-transform: none !important;
+  width: 50px ;
+  background-color: brown !important;
+}
+#cardone{
+  margin-left: 120px;
+  width: 40%;
+padding-top: 80px;
+}
+#cardtwo{
+  margin-left: 20px;
+  width: 80%;
+  margin-top: 80px;
+}
+#cardthree{
+  margin-left: 120px;
+  width: 40%;
+}
+#cardfour{
+  margin-left: 20px;
+  width: 40%;
+  margin-bottom: 20px;
+}
+#bell{
+  position: absolute;
+  right: 3%;
+  top: 2%;
+}
+::placeholder{
+  font-size: 15px;
+  font-weight: bold;
+}

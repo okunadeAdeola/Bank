@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #userAmount1{
+        width: 250px;
+    }
+</style>
+<body>
+    <input type="text" id="userAmount1" placeholder="Type the amount you want to deposit">
+    <button onclick="deposit()">Deposit</button>
+
+    <script>
+         var  allUsers = JSON.parse(localStorage.getItem("score")) ;
+         var storage = localStorage.getItem("userIndex")
+        // userAmount1.value = allUsers[storage].amount
+        const deposit =()=>{
+            // var y =  prompt("how much  did you want to deposit?")
+            var y =  userAmount1.value
+            allUsers[storage].amount  =  (Number(allUsers[storage].amount) +  Number(y))
+            //  userAmount1.value = allUsers[storage].amount
+             localStorage.setItem("score", JSON.stringify(allUsers));
+             window.location.href = "dashboard.html"
+
+        }
+    </script>
+</body>
+</html>
